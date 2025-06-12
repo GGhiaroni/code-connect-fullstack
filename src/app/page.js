@@ -10,6 +10,7 @@ async function getAllPosts(page) {
 
     const posts = await db.post.findMany({
       take: perPage,
+      orderBy: { createdAt: "desc" },
       include: {
         author: true,
       },
