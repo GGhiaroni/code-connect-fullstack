@@ -6,7 +6,10 @@ import styles from "./page.module.css";
 
 async function getAllPosts(page) {
   try {
+    const perPage = 6;
+
     const posts = await db.post.findMany({
+      take: perPage,
       include: {
         author: true,
       },
