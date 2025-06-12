@@ -1,4 +1,4 @@
-"use client"; // Error components must be Client Components
+"use client";
 
 import { Heading } from "@/components/Heading";
 import { ArrowBack } from "@/components/icons/ArrowBack";
@@ -12,7 +12,6 @@ import style from "./error/error.module.css";
 
 export default function Error({ error }) {
   useEffect(() => {
-    // Log the error to an error reporting service
     console.error(error);
   }, [error]);
 
